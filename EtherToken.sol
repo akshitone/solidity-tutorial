@@ -6,24 +6,21 @@ contract ERC20Token {
     mapping(address => uint256) public balances;
 
     function mint() public {
-       balances[msg.sender]++;
+       balances[tx.origin]++;
     }
 
 }
 
 contract EtherToken {
-    // ledger of balances
-    mapping(address => uint256) public balances; 
-
     // address of the wallet - payable include transfer and send members
     address payable wallet; 
 
-    // event for purchase contains buyer and amount
-    event Purchase(address indexed _buyer, uint256 _amount); 
+    address public token;
 
     // constructor contains the wallet address
-    constructor(address payable _wallet) public {
+    constructor(address payable _wallet, address _token) public {
         wallet = _wallet;
+        token = _token;
     } 
 
     // fallback function for ether transfer 
@@ -33,11 +30,8 @@ contract EtherToken {
 
     // called when the contract is called by the wallet 
     function buyToken() public payable {
-        // add 1 token to the sender
-        balances[msg.sender]++; 
+        ERC20Token(address(token)).mint();
         // transfer the value to the wallet
         wallet.transfer(msg.value); 
-        // trigger the event
-        emit Purchase(msg.sender, 1); 
     } 
 }

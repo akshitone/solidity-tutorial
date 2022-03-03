@@ -8,31 +8,40 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_wallet",
-						"type": "address"
-					},
-					{
 						"internalType": "address",
-						"name": "_token",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "buyToken",
-				"outputs": [],
-				"stateMutability": "payable",
+				"name": "balances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "fallBack",
+				"name": "mint",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -49,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"EtherToken.sol": "EtherToken"
+			"EtherToken.sol": "ERC20Token"
 		},
 		"evmVersion": "london",
 		"libraries": {},
