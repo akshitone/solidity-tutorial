@@ -7,12 +7,51 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getValue",
+				"name": "constValue",
 				"outputs": [
 					{
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myBool",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myInt",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myUint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -29,6 +68,19 @@
 				"name": "setValue",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "value",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -60,10 +112,10 @@
 	},
 	"sources": {
 		"MyContract.sol": {
-			"keccak256": "0xa8c8b377bc471cc2a121fdaf1be6b61b1a4dd990232b3abe7319c89d2809b972",
+			"keccak256": "0xb601d23a735b92fc65e286dd17bc2baaf20104723c3a9ee0fcf07a2d1f92a545",
 			"urls": [
-				"bzz-raw://7a3c25b5fca597a23db99a304b293493b48bef60fbdd0795e54aa6604e4711cc",
-				"dweb:/ipfs/Qmd9nDM11QZeS32fBQaqqDCZdvwHNGy5ga754nZK3zwJRm"
+				"bzz-raw://a336a294f5bfc80fa6c95b5e39a917b6e327ad6686cd369c06f6e2b480176fbd",
+				"dweb:/ipfs/QmVRdk6J4aWQm4GGehaK8bK3eMu6STpBZxH4paX7t9a9ds"
 			]
 		}
 	},
